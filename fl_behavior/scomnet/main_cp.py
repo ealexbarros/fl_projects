@@ -92,6 +92,11 @@ def split_dataframe(df):
 # In[69]:
 
 
+""" The code above does the following:
+    1. Loads the data from the csv files
+    2. Splits the data into train and validation sets
+    3. Reshapes the data from a 3D tensor to a 2D tensor
+    4. Creates a dataframe with the data and the labels"""
 def load_data():
     # config
     BASE_PATH = "/home/joaoneto/biometria/csv_files"
@@ -123,6 +128,11 @@ def load_data():
     
     return train_ds, val_ds, X_test, y_test, n
     
+"""The code above does the following:
+1. Creates a list of random samples of size num_frames from the dataset.
+2. Creates a list of users.
+3. Concatenates the data and the user ids into a single dataframe.
+4. Returns the dataframe and the user ids."""
 def split_data(data, users, num_frames):
     user_list = []
     train = []
@@ -145,6 +155,13 @@ def split_data(data, users, num_frames):
 # In[70]:
 
 
+""" The code above does the following:
+    1. Loads the data from the csv files
+    2. Splits the data into train and validation sets
+    3. Creates the train and validation datasets
+    4. Creates the test dataset
+    5. Returns the datasets
+"""
 def get_datasets():
     train_dataset, validation_dataset, X_test, y_test, n = load_data()
     return train_dataset, validation_dataset, X_test, y_test, n
@@ -153,6 +170,13 @@ def get_datasets():
 # In[71]:
 
 
+""" The code above does the following:
+1. it loads the dataset
+2. it splits the dataset into train and validation sets
+3. It defines the model
+4. It trains the model
+5. It evaluates the model
+"""
 def centralized_training_loop(train_dataset, validation_dataset, X_test, y_test, nbclasses, input_shape = (128, 3), num_filters = 128):
     input_layer = keras.layers.Input(input_shape) 
 
@@ -212,7 +236,13 @@ def centralized_training_loop(train_dataset, validation_dataset, X_test, y_test,
 
 # In[72]:
 
-
+""" The code above does the following:
+1. it loads the dataset
+2. Initializes the neural network
+3. Trains the neural network
+4. Evaluates the model on the test set
+5. Saves the model
+6. Plots the learning curve"""
 def centralized_pipeline():
     train_dataset, validation_dataset, X_test, y_test, n = get_datasets()
     centralized_training_loop(train_dataset, validation_dataset, X_test, y_test, n)
