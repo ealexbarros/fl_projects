@@ -10,16 +10,20 @@ A project that authenticates people based on their behavior data
 
 The main file that does not have federated learning is "main-cp.py". The main file with federated learning is "main-fed.ipynb".
 
-## Folders:
+<!-- DATASET -->
+<h2 id="dataset"> :floppy_disk: Dataset</h2>
+<p> 
+  BrainRun dataset. It can be found here:  https://zenodo.org/record/2598135#.X4H0qXgzbeo
+  
+   <!-- PREPROCESSING -->
+<h2 id="preprocessing"> :hammer: Preprocessing</h2>
 
-###  /extracted_feature_files
-Files that stores the extracted features for each database.
+Data from motion sensors is in the format: x, y, z, screen. Where x, y, z is the position of the mobile device according to the 3 axes and the screen is the game that was recorded.
+The dataset for each user consists of JSON files. Each JSON file is also a timestamp, during which data was collected.
 
-### /utilities
-Python functions that help to process the ECG signal.
+In this way, the data collected by the sensors are related to a temporal dimension, so a windowing technique is used to segment the raw time series and extract resources from each segment.
 
-### /feature_extraction_notebooks
-Folder that stores Jupyter Notebooks that were used to extract features from the original ECG signals.
+<!-- PRE-PROCESSED DATA -->
+<h2 id="preprocessed-data"> :diamond_shape_with_a_dot_inside: Pre-processed data</h2>
 
-### /authentication_example.ipynb 
-Notebook that authenticates users on a database using the extracted features.
+The dataset was segmented using a window size of considering 200 non-overlapping data points.
