@@ -4,11 +4,11 @@ A project that authenticates people based on their behavior data
 ## Install Requirements:
 ```pip3 install -r requirements.txt```
 
-## Prepare Dataset:
-
 ## Run Experiments: 
 
 The main file that does not have federated learning is "main-cp.py". The main file with federated learning is "main-fed.ipynb".
+
+## Prepare Dataset:
 
 <!-- DATASET -->
 <h2 id="dataset"> :floppy_disk: Dataset</h2>
