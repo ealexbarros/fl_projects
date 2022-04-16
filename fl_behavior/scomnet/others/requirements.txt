@@ -3,11 +3,9 @@ pandas
 glob2
 matplotlib
 pySyft
-pyTorch
 scikit-Learn
-sklearn
-ujson
-torch
 tensorflow==2.8.0
 tensorflow-federated==0.20.0
 tensorflow-cpu==2.8.0
+ujson
+torch
