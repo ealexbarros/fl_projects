@@ -1,9 +1,14 @@
 ## Federated Learning + Behavior Data + Authentication
 A project that authenticates people based on their behavior data
 
-## 
+## Install Requirements:
+```pip3 install -r requirements.txt```
 
+## Prepare Dataset:
 
+## Run Experiments: 
+
+The main file that does not have federated learning is "main-cp.py". The main file with federated learning is "main-fed.ipynb".
 
 ## Folders:
 
