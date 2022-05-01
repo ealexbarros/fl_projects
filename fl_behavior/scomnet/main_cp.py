@@ -104,7 +104,7 @@ def load_data():
     MAX_NUM_ROWS = 100000
     NUM_FRAMES = 1000
 
-    users_statistics = pd.read_csv("users_statistics.csv")
+    users_statistics = pd.read_csv("/home/joaoneto/biometria/fl_behavior/scomnet/users_statistics.csv")
     valid_users = users_statistics[(users_statistics.nrows >= MIN_NUM_ROWS) & (users_statistics.nrows <= MAX_NUM_ROWS)]["player_id"].unique()
 
     tmp_data = []
