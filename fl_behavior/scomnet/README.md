@@ -27,3 +27,7 @@ In this way, the data collected by the sensors are related to a temporal dimensi
 <h2 id="preprocessed-data"> :diamond_shape_with_a_dot_inside: Pre-processed data</h2>
 
 The dataset was segmented using a window size of considering 200 non-overlapping data points.
+
+## Plot
+
+Run "main-plot.ipynb"
